@@ -2,6 +2,10 @@
 <?php
 
     class logManager{ // before everything, please ensure yourself to create the "your db name".data file
+        
+        //second point, every function you are going to build based on database request must be like : function function_namr(arg1,arg2,argN,&log,&$response)
+        
+        //
 
       private $server="";
       private $DBuser="";
@@ -16,7 +20,7 @@
         $this->DBname=$dbname;
       }
 
-      public function accessLayer(&$response){
+      public function accessLayer(&servResponse){
 
         $dbname=$this->DBname;
         $dataHost=array();
@@ -24,7 +28,7 @@
         $filler=0;
 
         if(!file_exists($dbname."data")){
-          $this->response=array(
+          $this->servResponse=array(
             "status"=>403,
             "response"=>"The databse you are looking for do not exist"
           );
@@ -51,6 +55,8 @@
           );
 
         }
+          
+         $servResponse=$this->servResponse;
 
       }
 
@@ -72,7 +78,7 @@
             );
           }
 
-          $servResponse=$this->$servResponse;
+          $servResponse=$this->servResponse;
 
       }
 
