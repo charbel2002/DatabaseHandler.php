@@ -3,7 +3,7 @@
 
     class logManager{ // before everything, please ensure yourself to create the "your db name".data file
         
-        //second point, every function you are going to build based on database request must be like : function function_namr(arg1,arg2,argN,&log,&$response)
+        //second point, every function you are going to build based on database request must be like : function function_namr($arg1,$arg2,argN,&$log,&$response)
         
         //
 
