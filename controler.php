@@ -49,7 +49,7 @@
           $this->DBuser=$dataHost[1];
           $this->DBpass=$dataHost[2];
 
-          $this->response=array(
+          $this->servResponse=array(
             "status"=>200,
             "response"=>"Database file founded"
           );
