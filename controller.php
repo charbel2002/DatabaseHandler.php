@@ -16,6 +16,7 @@
       private $DBuser="";
       private $DBpass="";
       private $DBname="";
+        
       public $servResponse=array(
         "status"=>0,
         "response"=>null
